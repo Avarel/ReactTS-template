@@ -1,0 +1,30 @@
+{
+    "scripts": {
+        "build:dev": "webpack --config webpack.dev.js",
+        "build": "webpack --config webpack.prod.js",
+        "start": "webpack-dev-server --open --config webpack.dev.js --hot"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "@types/react": "^16.9.44",
+        "@types/react-dom": "^16.9.8",
+        "css-loader": "^3.6.0",
+        "file-loader": "^6.0.0",
+        "html-webpack-plugin": "^4.3.0",
+        "mini-css-extract-plugin": "^0.9.0",
+        "pug": "^3.0.0",
+        "pug-loader": "^2.4.0",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1",
+        "sass": "^1.26.10",
+        "sass-loader": "^9.0.2",
+        "style-loader": "^1.2.1",
+        "ts-loader": "^7.0.5",
+        "typescript": "^3.9.7",
+        "webpack": "^4.44.1",
+        "webpack-cli": "^3.3.12",
+        "webpack-dev-middleware": "^3.7.2",
+        "webpack-dev-server": "^3.11.0",
+        "webpack-merge": "^4.2.2"
+    }
+}
