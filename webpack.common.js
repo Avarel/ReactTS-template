@@ -1,6 +1,7 @@
 const path = require("path");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
     entry: {
@@ -9,7 +10,9 @@ module.exports = {
     output: {
         filename: "[name].bundle.js",
         chunkFilename: "[name].bundle.js",
-        path: path.resolve(__dirname, "dist")
+        path: path.resolve(__dirname, "dist"),
+        publicPath: "",
+        assetModuleFilename: "./assets/[name][ext][query]"
     },
     externals: {
         "react": "React",
@@ -17,16 +20,21 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: "./src/index.pug",
+            template: "./src/index.html",
+            // favicon: './src/assets/favicon.ico',
             scriptLoading: "defer",
-            chunks: ["index"]
+            chunks: ["index"],
         }),
     ],
     resolve: {
-        extensions: [".ts", ".tsx", ".js", ".scss", ".css", ".pug", ".html"]
+        extensions: [".ts", ".tsx", ".js", ".scss", ".css", ".html"]
     },
     module: {
         rules: [
+            {
+                test: /\.html$/i,
+                loader: 'html-loader',
+            },
             {
                 test: /\.tsx?$/,
                 exclude: /(node_modules|bower_components)/,
@@ -54,9 +62,9 @@ module.exports = {
                 ]
             },
             {
-                test: /\.pug$/,
-                loaders: ["pug-loader"]
-            }
+                test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,
+                type: 'asset/resource',
+            },
         ]
     },
     optimization: {

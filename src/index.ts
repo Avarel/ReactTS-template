@@ -1,1 +1,3 @@
-console.log("EZWebpack Template.")
+import "./index.scss";
+
+console.log("Hello world!")
