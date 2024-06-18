@@ -24,7 +24,7 @@
         "react-dom": "^18.2.0",
         "sass": "^1.75.0",
         "sass-loader": "^13.3.3",
-        "style-loader": "^3.3.4",
+        "style-loader": "^4.0.0",
         "ts-loader": "^9.5.1",
         "typed.js": "^2.1.0",
         "typescript": "^4.9.5",
