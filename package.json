@@ -23,7 +23,7 @@
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "sass": "^1.75.0",
-        "sass-loader": "^13.3.3",
+        "sass-loader": "^16.0.2",
         "style-loader": "^3.3.4",
         "ts-loader": "^9.5.1",
         "typed.js": "^2.1.0",
